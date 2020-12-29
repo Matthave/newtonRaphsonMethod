@@ -1,0 +1,152 @@
+*{
+    margin:0;
+    padding:0;
+    border:0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.App{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #111;
+    padding:50px 0px;
+}
+
+.newton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    width:200px;
+    height: 40px;
+    padding: 0px 15px;
+    margin: 7.5px 0px;
+}
+
+select{
+    margin-top: 7.5px;
+    padding: 5px;
+}
+
+.resultWrapper{
+    max-width: 310px;
+    padding: 25px 0px;
+    overflow-x: scroll;
+
+
+    @include mq(xxsmall){
+        max-width: 390px;
+    }
+
+    @include mq(xsmall){
+        max-width: 566px;
+    }
+
+    @include mq(small){
+        max-width: 758px;
+    }
+
+    @include mq(medium){
+        max-width: 1015px;
+    }
+
+    @include mq(large){
+        max-width: 1190px;
+    }
+}
+
+.result{
+    margin-top: 45px;
+    width:100vw;
+    max-width: 750px;
+    color:#fff;
+    font-family: 'Courier New', Courier, monospace;
+
+    & > tbody{
+        background-color: #fff;
+        color:#111;
+    }
+
+    & th{
+        height: 50px !important;
+        font-size: 18px;
+        padding: 0 5px;
+
+        position:-webkit-sticky; 
+        position:sticky; 
+        top:0;
+        background-color: #111;
+    }
+
+    & td{
+        height: 40px !important;
+        padding: 0 5px;
+
+        &:hover{
+            background-color: #EFD71C;
+        }
+    }
+}
+
+.calculate{
+    margin-top: 20px;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    padding:0;
+    font-size: 14px;
+    background-color: #ccc;
+    pointer-events: none;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &--allow{
+        background-color: #EFD71C;
+        pointer-events: auto;
+    }
+}
+
+.title{
+    text-align: center;
+    font-size: 6vw;
+    font-family: 'Courier New', Courier, monospace;
+    color:#fff;
+    margin-bottom:50px;
+
+    @include mq(medium){
+        font-size: 60px;
+    }
+}
+
+.arrowUp{
+    display: none;
+    position: fixed;
+    top:95%;
+    left:95%;
+    width:40px;
+    height:40px;
+    background-color: #EFD71C;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    
+    justify-content: center;
+    align-items: center;
+
+    &--show{
+        display: flex;
+    }
+
+    & > img {
+        width:25px;
+        transform: rotate(-90deg);
+    }
+}
