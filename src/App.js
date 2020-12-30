@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import arrowUp from './img/arrowUp.png';
+import arrowUp from './img/arrowUp.svg';
 import "./css/style.css";
 
 function App() {
@@ -171,7 +171,7 @@ function App() {
         </div>
       
       {/* FIXED ELEMENTS */}
-      <div className="arrowUp" onClick={()=>onClickScrollToTop()}><img src={arrowUp} alt="arrowIcon"></img></div>
+      <div className="arrowUp" onClick={()=>onClickScrollToTop()}><img width="20" src={arrowUp} alt="arrowIcon"></img></div>
     </div>
   );
 }
